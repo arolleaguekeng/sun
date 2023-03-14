@@ -1,9 +1,20 @@
 body {
     margin: 0;
+    background-color: black;
+    .etl{
+        position: absolute;
+        left: 0;
+        width: 30%;
+        height: 100vh;
+    }
+    .etl:hover #stars{
+        animation: animhoverStar 2s linear infinite;
+        transition: all .4s ease-in-out;
+    }
 }
 
 .container {
-    background-color: black;
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,17 +27,25 @@ body {
     flex-direction: column;
 
     .title {
-        font-size: 30px;
-        font-family: 'Century Gothic';
-        -webkit-text-stroke: white;
-        -webkit-text-stroke-width: 1px;
+        font-size: 50px;
+        font-family: Lato;
+        font-weight: 500;
+        background: -webkit-linear-gradient(white, #0dbd42);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         position: absolute;
-        bottom: 8%;
+        transition: all .4s ease-in-out;
+        bottom: 3%; 
+        &:hover{
+            background: -webkit-linear-gradient(white,red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            transition: all .4s ease-in-out; 
+            
+        }
     }
     
-}
-.cube:hover h1{
-    -webkit-text-stroke: red;
 }
 
 .cubes {
@@ -62,8 +81,8 @@ body {
         width: 100%;
         height: 100%;
         box-shadow: 0 0 0px #b40c0c,
-            0 0 10px #0dbd42,
-            0 0 30px rgb(12, 242, 111);
+            0 0 30px #0dbd42,
+            0 0 90px rgb(12, 242, 111);
 
         background-size: contain;
         border-radius: 50%;
