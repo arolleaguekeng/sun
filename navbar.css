@@ -1,0 +1,207 @@
+nav{
+    height: 80px;
+    color: rgb(36, 35, 35);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Major Mono Display', monospace; 
+    
+    position: fixed;
+    width: 100%;
+}
+
+
+.logo{
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    
+    margin-left: 8%;
+    justify-content: center;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+nav ul{
+    
+    margin-right: 8%;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+}
+
+
+nav ul li a{
+    font-size: 17px;
+    padding: 7px 13px;
+    color: antiquewhite;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.checkbtn{
+    font-size: 15px;
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+    border: none;
+}
+
+#check{
+    display: none;
+}
+
+
+/*Nav end*/
+
+
+/* stroke */
+nav ul li a{
+  position: relative;
+  text-transform: uppercase;
+ 
+}
+nav ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(0, 185, 0);
+  height: 2px;
+  
+}
+nav ul li a:hover:after {
+  width: 100%;
+  
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+  cursor: pointer;
+}
+nav ul li a:hover {
+    box-shadow: 0 0 0px #b40c0c,
+    0 0 10px #0dbd42,
+    0 0 30px #dab40d
+    ;
+  cursor: pointer;
+}
+
+
+@media (max-width: 952px) {
+  .logo {
+      font-size: 30px;
+
+  }
+
+  nav ul li a {
+      font-size: 16px;
+  }
+
+  button{
+      border-color: white;
+      color: antiquewhite;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 952px) {
+  .checkbtn {
+      display: block;
+  }
+
+  .container{
+    background-size: 500px;
+  }
+  ul {
+      position: absolute !important;
+      width: 90%;
+      height: 100vh;
+      background-color: #ffffff;
+      top: 80px;
+      left: -105%;
+      display: block;
+      text-align: center;
+      color: #0f2463;
+      transition: 1s cubic-bezier(.5, 0, 0, 1);
+      opacity: 1;
+      z-index: 1;
+  }
+
+  .logo {
+      font-size: 25px;
+      padding-left: 20px;
+  }
+
+  nav {
+      padding: 0;
+      position: fixed;
+      top: 0;
+  }
+
+  nav ul li {
+      display: block;
+      line-height: 30px;
+  }
+
+  nav ul li a {
+      font-size: 20px;
+      color: antiquewhite;
+      margin: 0;
+  }
+
+  .img-logo {
+      width: 32;
+  }
+
+  a:hover,
+  a.active {
+      background-color: none;
+      color: #0082e6;
+  }
+
+  #check:checked~ul {
+      left: 0;
+  }
+
+  nav ul li a:checked~ul{
+      left: 0;
+  }
+
+}
+
+
+
+button:hover{
+  border: none;
+  background-color: #0f2463;
+  transition: all .4s ease-in-out;
+  color: white;
+}
+
+@media (max-width: 1024px) { 
+
+  
+}

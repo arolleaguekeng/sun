@@ -1,6 +1,43 @@
-.cube {
-  width: 100%;
-  height: 100%;
+body {
+  margin: 0;
+}
+
+.container {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(bg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 800px;
+  background-position-y: bottom;
+  flex-direction: column;
+}
+.container .title {
+  font-size: 30px;
+  font-family: "Century Gothic";
+  -webkit-text-stroke: white;
+  -webkit-text-stroke-width: 1px;
+  position: absolute;
+  bottom: 8%;
+}
+
+.cube:hover h1 {
+  -webkit-text-stroke: red;
+}
+
+.cubes {
+  height: 240px;
+  width: 240px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.cubes .cube {
+  width: 300px;
+  height: 300px;
   position: absolute;
   transform-style: preserve-3d;
   /*allows you to switch to 3d mode*/
@@ -8,54 +45,42 @@
   transition: all 0.3s;
   border-radius: 2000px;
 }
-
-.cube:hover .face {
-  box-shadow: 0 0 0px #b40c0c, 0 0 10px #0dbd42, 0 0 30px #dab40d;
+.cubes .cube:hover .face {
+  box-shadow: 0 0 0px #b40c0c, 0 0 40px #fcfcfc, 0 0 200px #ff0000;
+  transition: all 0.4s ease-in-out;
 }
-
-.face {
+.cubes .face {
+  transition: all 0.4s ease-in-out;
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 0px #0f2463, 0 0 110px #ffffff, 0 0 300px #0f2463;
+  box-shadow: 0 0 0px #b40c0c, 0 0 10px #0dbd42, 0 0 30px rgb(12, 242, 111);
   background-size: contain;
-  border-radius: 2000px;
+  border-radius: 50%;
   background-repeat: no-repeat;
-  background-color: transparent;
 }
-
-.bottom {
+.cubes .bottom {
   transform: rotateX(-90deg) translateZ(50px);
   /*Rotate 3d Frame*/
 }
-
-.right {
+.cubes .top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+.cubes .right {
   transform: rotateY(90deg) translateZ(50px);
   /*Rotate 3d Frame*/
 }
-
-.left {
+.cubes .left {
   transform: rotateY(-90deg) translateZ(50px);
   /*Rotate 3d Frame*/
 }
-
-.front {
-  transform: rotateX(100deg) translateZ(50px);
-  text-align: center;
-  /*Rotate 3d Frame*/
+.cubes .front {
+  transform: rotateX(180deg) translateZ(50px);
 }
-
-.back {
+.cubes .back {
   transform: rotateX(-180deg) translateZ(50px);
   /*Rotate 3d Frame*/
 }
-
-.top {
-  top: 0;
-  left: 0;
-  transform: rotateX(90deg) translateZ(50px);
-}
-
 @keyframes spin {
   from {
     transform: rotateX(-10deg) rotateY(40deg);

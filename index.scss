@@ -1,92 +1,123 @@
-
-.cube {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    /*allows you to switch to 3d mode*/
-    animation: spin 50s infinite linear;
-    transition: all .3s;
-    border-radius: 2000px;
+body {
+    margin: 0;
 }
 
-
-.cube:hover .face{
-    box-shadow: 0 0 0px #b40c0c,
-    0 0 10px #0dbd42,
-    0 0 30px #dab40d
-    ;
-}
-
-
-.face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 0px #0f2463,
-    0 0 110px #ffffff,
-    0 0 300px #0f2463
-    ;
-
-    background-size: contain;
-    border-radius: 2000px;
+.container {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(bg.webp);
     background-repeat: no-repeat;
-    background-color: transparent;
+    background-position: center;
+    background-size: 800px;
+    background-position-y: bottom;
+    flex-direction: column;
+
+    .title {
+        font-size: 30px;
+        font-family: 'Century Gothic';
+        -webkit-text-stroke: white;
+        -webkit-text-stroke-width: 1px;
+        position: absolute;
+        bottom: 8%;
+    }
+    
+}
+.cube:hover h1{
+    -webkit-text-stroke: red;
 }
 
+.cubes {
+    height: 240px;
+    width: 240px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 
-
-.bottom {
-    
-    transform: rotateX(-90deg) translateZ(50px);
-    
-    /*Rotate 3d Frame*/
-}
-
-.right {
-    transform: rotateY(90deg) translateZ(50px);
-    
-    /*Rotate 3d Frame*/
-}
-
-.left {
-
-    transform: rotateY(-90deg) translateZ(50px);
-    
-    /*Rotate 3d Frame*/
-}
-
-
-.front {
-    transform: rotateX(100deg) translateZ(50px);
-    text-align: center;
-    
-    /*Rotate 3d Frame*/
-}
-
-.back {
-    
-    transform: rotateX(-180deg) translateZ(50px);
-    /*Rotate 3d Frame*/
-}
-
-.top {
-    top: 0;
-    left: 0;
-
-    transform: rotateX(90deg) translateZ(50px);
-    
-;
-}
-
-
-
-@keyframes spin {
-    from {
-        transform: rotateX(-10deg) rotateY(40deg);
+    .cube {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        transform-style: preserve-3d;
+        /*allows you to switch to 3d mode*/
+        animation: spin 50s infinite linear;
+        transition: all .3s;
+        border-radius: 2000px;
     }
 
-    to {
-        transform: rotateX(-360deg) rotateY(360deg);
+
+    .cube:hover .face {
+        box-shadow: 0 0 0px #b40c0c,
+            0 0 40px #fcfcfc,
+            0 0 200px #ff0000;
+            transition: all .4s ease-in-out;
     }
+
+
+    .face {
+        transition: all .4s ease-in-out;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 0px #b40c0c,
+            0 0 10px #0dbd42,
+            0 0 30px rgb(12, 242, 111);
+
+        background-size: contain;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+    }
+
+
+
+    .bottom {
+
+        transform: rotateX(-90deg) translateZ(50px);
+
+        /*Rotate 3d Frame*/
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(50px);
+
+        /*Rotate 3d Frame*/
+    }
+
+    .left {
+
+        transform: rotateY(-90deg) translateZ(50px);
+
+        /*Rotate 3d Frame*/
+    }
+
+
+    .front {
+        transform: rotateX(180deg) translateZ(50px);
+    }
+
+    .back {
+
+        transform: rotateX(-180deg) translateZ(50px);
+        /*Rotate 3d Frame*/
+    }
+
+
+
+
+    @keyframes spin {
+        from {
+            transform: rotateX(-10deg) rotateY(40deg);
+        }
+
+        to {
+            transform: rotateX(-360deg) rotateY(360deg);
+        }
+    }
+
 }
