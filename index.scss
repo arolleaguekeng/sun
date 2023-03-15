@@ -1,20 +1,145 @@
 body {
     margin: 0;
+
     background-color: black;
-    .etl{
+
+    .etl {
         position: absolute;
         left: 0;
         width: 30%;
-        height: 100vh;
+        height: 200vh;
     }
-    .etl:hover #stars{
+
+    .etl:hover #stars {
         animation: animhoverStar 2s linear infinite;
         transition: all .4s ease-in-out;
     }
+
+    .services {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        .card-content {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+            text-align: start;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .card {
+                width: 25%;
+                height: 270px;
+                border: 1px solid #0dbd42;
+                margin: 15px;
+                text-align: center;
+                border-radius: 15px;
+                cursor: pointer;
+
+                svg {
+                    width: 50%;
+                    fill: #0dbd42;
+                    stroke: #0dbd42;
+                    position: relative;
+                    transition: all .3s ease-in-out;
+                }
+
+                &:hover svg {
+                    transition: all .3s ease-in-out;
+                    fill: white;
+                    stroke: white;
+                }
+
+                &:hover {
+                    border-color: white;
+                }
+
+                &:hover h2 {
+                    background: -webkit-linear-gradient(white, white);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .abt-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0% 8%;
+
+            .left {
+                width: 40%;
+
+                h2 {
+                    font-size: 33px;
+                }
+
+                span {
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+
+            .right {
+                width: 60%;
+
+                svg {
+                    color: #0dbd42;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+    }
+}
+footer{
+    color: white;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
+}
+h1 {
+    font-size: 50px;
+    font-family: Lato;
+    font-weight: 500;
+    background: -webkit-linear-gradient(white, #0dbd42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover {
+        background: -webkit-linear-gradient(white, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+
+    }
+}
+
+h2 {
+    @extend h1;
+    font-size: 20px;
+
 }
 
 .container {
-   
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,17 +160,18 @@ body {
         -webkit-text-fill-color: transparent;
         position: absolute;
         transition: all .4s ease-in-out;
-        bottom: 3%; 
-        &:hover{
-            background: -webkit-linear-gradient(white,red);
+        bottom: 3%;
+
+        &:hover {
+            background: -webkit-linear-gradient(white, white);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             cursor: pointer;
-            transition: all .4s ease-in-out; 
-            
+            transition: all .4s ease-in-out;
+
         }
     }
-    
+
 }
 
 .cubes {
@@ -70,8 +196,8 @@ body {
     .cube:hover .face {
         box-shadow: 0 0 0px #b40c0c,
             0 0 40px #fcfcfc,
-            0 0 200px #ff0000;
-            transition: all .4s ease-in-out;
+            0 0 200px white;
+        transition: all .4s ease-in-out;
     }
 
 

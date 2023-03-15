@@ -6,11 +6,115 @@ body .etl {
   position: absolute;
   left: 0;
   width: 30%;
-  height: 100vh;
+  height: 200vh;
 }
 body .etl:hover #stars {
   animation: animhoverStar 2s linear infinite;
   transition: all 0.4s ease-in-out;
+}
+body .services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+body .services .card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  text-align: start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+body .services .card-content .card {
+  width: 25%;
+  height: 270px;
+  border: 1px solid #0dbd42;
+  margin: 15px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+body .services .card-content .card svg {
+  width: 50%;
+  fill: #0dbd42;
+  stroke: #0dbd42;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+body .services .card-content .card:hover svg {
+  transition: all 0.3s ease-in-out;
+  fill: white;
+  stroke: white;
+}
+body .services .card-content .card:hover {
+  border-color: white;
+}
+body .services .card-content .card:hover h2 {
+  background: -webkit-linear-gradient(white, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .about .abt-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0% 8%;
+}
+body .about .abt-container .left {
+  width: 40%;
+}
+body .about .abt-container .left h2 {
+  font-size: 33px;
+}
+body .about .abt-container .left span {
+  color: white;
+  font-size: 20px;
+}
+body .about .abt-container .right {
+  width: 60%;
+}
+body .about .abt-container .right svg {
+  color: #0dbd42;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  color: white;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0;
+}
+
+h1, h2 {
+  font-size: 50px;
+  font-family: Lato;
+  font-weight: 500;
+  background: -webkit-linear-gradient(white, #0dbd42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1:hover, h2:hover {
+  background: -webkit-linear-gradient(white, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .container {
@@ -37,7 +141,7 @@ body .etl:hover #stars {
   bottom: 3%;
 }
 .container .title:hover {
-  background: -webkit-linear-gradient(white, red);
+  background: -webkit-linear-gradient(white, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
@@ -62,7 +166,7 @@ body .etl:hover #stars {
   border-radius: 2000px;
 }
 .cubes .cube:hover .face {
-  box-shadow: 0 0 0px #b40c0c, 0 0 40px #fcfcfc, 0 0 200px #ff0000;
+  box-shadow: 0 0 0px #b40c0c, 0 0 40px #fcfcfc, 0 0 200px white;
   transition: all 0.4s ease-in-out;
 }
 .cubes .face {
